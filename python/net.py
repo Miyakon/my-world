@@ -1,2 +1,4 @@
 import requests
-print(requests.get("https://www.python.jp").txt)
+print(requests.get("https://www.python.jp").text)
+
+
