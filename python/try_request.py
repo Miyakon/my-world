@@ -19,6 +19,7 @@ print(response.url)
 print (response.status_code)
 # 200
 
+print('\n\n\n---header---')
 print(response.headers)
 # {'Content-Encoding': 'gzip',
 # 'Accept-Ranges': 'bytes',
@@ -33,13 +34,9 @@ print(response.headers)
 # 'X-Cache': 'HIT',
 # 'Content-Length': '606'}
 
-print(response.headers['Content-Type'])
-print(response.headers['content-type'])
-
 print(response.encoding)
 
 print('\n\n\n---body---')
-
 print(response.text)
 
 url = 'https://www.google.co.jp/search'
@@ -50,3 +47,9 @@ r = requests.get(url, params=params)
 
 print(r.url)
 # https://www.google.co.jp/search?q=%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8&tbm=nws
+
+print('\n\n\n---header---')
+print(r.headers)
+
+print('\n\n\n---body---')
+print(r.text)
