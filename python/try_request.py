@@ -6,6 +6,9 @@ import requests
 url = 'https://example.com/'
 
 response = requests.get(url)
+print('\n\n -- request -- ')
+print(response.request.headers)
+print('\n\n')
 
 print(response)
 # expected <Response [200]>
@@ -53,3 +56,6 @@ print(r.headers)
 
 print('\n\n\n---body---')
 print(r.text)
+
+print('\n\n\n---history---')
+print(r.history)

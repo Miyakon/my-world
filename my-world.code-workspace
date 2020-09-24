@@ -7,5 +7,9 @@
 			"path": "..\\VE\\my-world\\Lib"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"Q:\\Repository\\VE\\my-world\\Lib\\site-packages"
+		]
+	}
 }
