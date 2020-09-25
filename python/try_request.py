@@ -1,4 +1,5 @@
-import requests
+import request
+import urllib
 
 # requests.get() -> HTTP GET method
 # requests.post(), requests.delete()
