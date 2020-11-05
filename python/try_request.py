@@ -1,4 +1,4 @@
-import request
+import requests
 import urllib
 
 # requests.get() -> HTTP GET method
@@ -7,9 +7,10 @@ import urllib
 url = 'https://example.com/'
 
 response = requests.get(url)
-print('\n\n -- request -- ')
+print('\n\n -- request headers -- ')
 print(response.request.headers)
 print('\n\n')
+print(response.request.)
 
 print(response)
 # expected <Response [200]>
