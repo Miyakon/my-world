@@ -10,7 +10,7 @@ response = requests.get(url)
 print('\n\n -- request headers -- ')
 print(response.request.headers)
 print('\n\n')
-print(response.request.)
+print(response.request)
 
 print(response)
 # expected <Response [200]>
