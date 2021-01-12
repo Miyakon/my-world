@@ -7,7 +7,7 @@ pipeline {
     }
     parameters {
         choice(name: 'BRANCH_OR_TAG', choices: ['Branch', 'Tag'], description: 'Select Checkout Type')
-        string(name: 'CHECKOUT_POINT', defaultValue: 'develop / v1.0.0', description:)
+        string(name: 'CHECKOUT_POINT', defaultValue: 'develop / v1.0.0', description: 'Input value')
         choice(name: 'SERVERS', choices: ['hoge', 'fuga', 'piyo', 'foo', 'bar', 'baz'], description: 'Select Deploying Server')
     }
     stages {
@@ -38,4 +38,4 @@ pipeline {
         """
 
     }
-}
+}git 
