@@ -28,14 +28,14 @@ pipeline {
                 }
             }
 
+            sh """
+                printevn
+                echo ${params.BRANCH_OR_TASG}
+                echo ${params.CHECKOUT_POINT}
+                echo ${params.SERVERS}
+            """
         }
 
-        sh """
-            printevn
-            echo ${params.BRANCH_OR_TASG}
-            echo ${params.CHECKOUT_POINT}
-            echo ${params.SERVERS}
-        """
 
     }
 }git 
