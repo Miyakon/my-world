@@ -27,7 +27,7 @@ pipeline {
                 //     }
                 // }
                 sh """
-                    printevn
+                    printenv
                     echo ${params.BRANCH_OR_TAS}
                     echo ${params.CHECKOUT_POINT}
                     echo ${params.SERVERS}
