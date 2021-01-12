@@ -30,7 +30,7 @@ pipeline {
 
             sh """
                 printevn
-                echo ${params.BRANCH_OR_TASG}
+                echo ${params.BRANCH_OR_TAS}
                 echo ${params.CHECKOUT_POINT}
                 echo ${params.SERVERS}
             """
