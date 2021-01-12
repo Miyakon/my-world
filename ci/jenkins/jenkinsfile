@@ -28,9 +28,10 @@ pipeline {
             steps {
                 sh """
                     printenv
-                    echo ${params.BRANCH_OR_TAS}
+                    echo ${params.BRANCH_OR_TAG}
                     echo ${params.CHECKOUT_POINT}
                     echo ${params.SERVERS}
+                    echo ${work_dir}
                 """
             }
         }
