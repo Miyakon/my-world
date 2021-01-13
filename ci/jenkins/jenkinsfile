@@ -27,6 +27,20 @@ pipeline {
             }
             steps {
                 sh """
+                    echo '01 default pwd'
+                    pwd
+                """
+            }
+            steps {
+                dir(work_dir){
+                    sh """
+                        echo '02 move work_dir pwd'
+                        pwd
+                    """
+                }
+                sh """
+                    echo "pwd which outside 'dir()' in same 'steps'"
+                    pwd
                     printenv
                     echo ${params.BRANCH_OR_TAG}
                     echo ${params.CHECKOUT_POINT}
