@@ -1,9 +1,12 @@
 pipeline {
     agent any
     environment {
-        work_dir='/Users/mt/.jenkins/workspace'
+        work_dir='/Users/mt/.jenkins/workspacegit'
         bundle='/home/jenkins/bin/bundle'
         deploy_dir='/home/jenkins/deploy'
+    }
+    options {
+        checkoutToSubdirectory('sub_dir')
     }
     parameters {
         choice(name: 'BRANCH_OR_TAG', choices: ['Branch', 'Tag'], description: 'Select Checkout Type')
