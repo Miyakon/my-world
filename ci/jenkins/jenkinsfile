@@ -31,6 +31,9 @@ pipeline {
                     pwd
                 """
             }
+        }
+
+        stage('test pwd') {
             steps {
                 dir(work_dir){
                     sh """
