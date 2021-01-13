@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        work_dir='/home/jenkins/work'
+        work_dir='/Users/mt/.jenkins/workspace'
         bundle='/home/jenkins/bin/bundle'
         deploy_dir='/home/jenkins/deploy'
     }
