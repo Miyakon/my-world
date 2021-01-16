@@ -53,6 +53,8 @@ pipeline {
                     echo ${params.SERVERS}
                     echo ${work_dir}
                 """
+
+                archiveArtifacts *.txt
             }
         }
     }
