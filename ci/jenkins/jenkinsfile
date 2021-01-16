@@ -53,7 +53,11 @@ pipeline {
                     echo ${params.SERVERS}
                     echo ${work_dir}
                 """
+            }
+        }
 
+        stage('archive artifactws') {
+            steps {
                 archiveArtifacts *.txt
             }
         }
