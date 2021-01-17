@@ -8,7 +8,7 @@ agent { docker 'maven:3-alpine' }
     }
 
     options {
-        timeout(time: 1, unit: 'MINUTES')
+        timeout(time: 3, unit: 'MINUTES')
         checkoutToSubdirectory('sub_dir')
     }
 
