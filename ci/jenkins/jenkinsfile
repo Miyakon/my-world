@@ -62,7 +62,7 @@ pipeline {
 
         stage('archive artifacts') {
             steps {
-                archiveArtifacts '*.fantastic'
+                archiveArtifacts '*'
             }
         }
     }
