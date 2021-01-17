@@ -43,17 +43,14 @@ agent { docker 'centos' }
 
         stage('test pwd') {
             steps {
-                dir(){
-                    sh """
-                        echo '02 ls /'
-                        ls /
-                        ls ./
-                        ls ../
-                        ls ../../
-                        ls ../../../
-                    """
-                }
                 sh """
+                    echo '02 ls /'
+                    ls /
+                    ls ./
+                    ls ../
+                    ls ../../
+                    ls ../../../
+                     
                     echo "03 printenv"
                     printenv
                     echo ${params.BRANCH_OR_TAG}
