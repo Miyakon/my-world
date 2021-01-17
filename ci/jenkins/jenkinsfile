@@ -1,6 +1,7 @@
 pipeline {
     agent {
         docker {
+            any
             image 'centos'
         }
     }
