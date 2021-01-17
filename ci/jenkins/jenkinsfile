@@ -43,7 +43,7 @@ agent { docker 'centos' }
 
         stage('test pwd') {
             steps {
-                dir(work_dir){
+                dir(){
                     sh """
                         echo '02 ls /'
                         ls /
