@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'centos'
-        }
-    }
+agent { docker 'maven:3-alpine' } 
 
     environment {
         work_dir='/Users/mt/.jenkins/workspacegit'
@@ -12,6 +8,7 @@ pipeline {
     }
 
     options {
+        timout(time: 1, unit: 'MINUTES')
         checkoutToSubdirectory('sub_dir')
     }
 
