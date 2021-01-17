@@ -1,73 +1,11 @@
 pipeline {
     agent {
-        docker {
-            any
-            image 'centos'
-        }
+        docker { image 'node:14-alpine' }
     }
-
-    environment {
-        work_dir='/Users/mt/.jenkins/workspacegit'
-        bundle='/home/jenkins/bin/bundle'
-        deploy_dir='/home/jenkins/deploy'
-    }
-
-    options {
-        checkoutToSubdirectory('sub_dir')
-    }
-
-    parameters {
-        choice(name: 'BRANCH_OR_TAG', choices: ['Branch', 'Tag'], description: 'Select Checkout Type')
-        string(name: 'CHECKOUT_POINT', defaultValue: 'develop / v1.0.0', description: 'Input value')
-        choice(name: 'SERVERS', choices: ['hoge', 'fuga', 'piyo', 'foo', 'bar', 'baz'], description: 'Select Deploying Server')
-    }
-
     stages {
-        stage('Check Environment') {
-            environment {
-                LOCAL_VAR='/home/jenkins/target_dir'
-            }
-            // 公式ドキュメントより
-            // このように記述することで途中で入力を受け付けるようになる
-            // input {
-            //     message "Should we continue?"
-            //     ok "Yes, we should."
-            //     submitter "alice,bob"
-            //     parameters {
-            //         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-            //     }
-            // }
+        stage('Test') {
             steps {
-                sh """
-                    echo '01 default pwd'
-                    pwd
-                """
-            }
-        }
-
-        stage('test pwd') {
-            steps {
-                dir(work_dir){
-                    sh """
-                        echo '02 move work_dir pwd'
-                        pwd
-                    """
-                }
-                sh """
-                    echo "pwd which outside 'dir()' in same 'steps'"
-                    pwd
-                    printenv
-                    echo ${params.BRANCH_OR_TAG}
-                    echo ${params.CHECKOUT_POINT}
-                    echo ${params.SERVERS}
-                    echo ${work_dir}
-                """
-            }
-        }
-
-        stage('archive artifacts') {
-            steps {
-                archiveArtifacts (artifacts:'*.no-entry', allowEmptyArchive:'True')
+                sh 'node --version'
             }
         }
     }
