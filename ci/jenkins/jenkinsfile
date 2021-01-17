@@ -62,7 +62,7 @@ pipeline {
 
         stage('archive artifacts') {
             steps {
-                archiveArtifacts(artifacts:'*.no-entry', allowEmptyArchive: True)
+                archiveArtifacts(artifacts:'*.no-entry' allowEmptyArchive: True)
             }
         }
     }
