@@ -57,11 +57,5 @@ pipeline {
                 archiveArtifacts '*.txt'
             }
         }
-
-        stage('archive artifacts') {
-            steps {
-                archiveArtifacts fileName
-            }
-        }
     }
 }
