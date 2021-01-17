@@ -46,6 +46,8 @@ agent { docker 'centos' }
                 sh """
                     echo '02 ls /'
                     ls /
+                    ls /Users/
+                    cat /etc/redhat-release
                     ls ./
                     ls ../
                     ls ../../
