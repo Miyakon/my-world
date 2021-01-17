@@ -16,7 +16,7 @@ pipeline {
         string(name: 'CHECKOUT_POINT', defaultValue: 'develop / v1.0.0', description: 'Input value')
         choice(name: 'SERVERS', choices: ['hoge', 'fuga', 'piyo', 'foo', 'bar', 'baz'], description: 'Select Deploying Server')
     }
-    
+
     stages {
         stage('Check Environment') {
             environment {
@@ -62,7 +62,7 @@ pipeline {
 
         stage('archive artifacts') {
             steps {
-                archiveArtifacts '*.txt'
+                archiveArtifacts '*.fantastic'
             }
         }
     }
