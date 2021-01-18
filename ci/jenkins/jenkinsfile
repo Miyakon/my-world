@@ -72,15 +72,15 @@ agent { docker 'centos' }
     post {
        // only triggered when blue or green sign
        success {
-           slackSend(channel: "#jenkins-channel", message:"Success")
+           slackSend(channel: "#jenkins-test", message:"Success")
        }
        // triggered when red sign
        failure {
-           slackSend(channel: "#jenkins-channel", message:"Failure")
+           slackSend(channel: "#jenkins-test", message:"Failure")
        }
        // trigger every-works
        always {
-           slackSend(channel: "#jenkins-channel", message:"always")
+           slackSend(channel: "#jenkins-test", message:"always")
        }
     }
 }
