@@ -76,11 +76,11 @@ agent { docker 'centos' }
        }
        // triggered when red sign
        failure {
-           lackSend(channel: "@Miyakon", message:"Failure")
+           slackSend(channel: "@Miyakon", message:"Failure")
        }
        // trigger every-works
        always {
-           lackSend(channel: "@Miyakon", message:"always")
+           slackSend(channel: "@Miyakon", message:"always")
        }
     }
 }
