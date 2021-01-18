@@ -72,7 +72,7 @@ agent { docker 'centos' }
     post {
        // only triggered when blue or green sign
        success {
-           slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
+           slackSend color: "#439FE0", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}", channel: "#jenkins-test"
        }
        // triggered when red sign
        failure {
@@ -80,7 +80,7 @@ agent { docker 'centos' }
        }
        // trigger every-works
        always {
-           slackSend "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+           slackSend message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", channel: "#jenkins-test"
        }
     }
 }
