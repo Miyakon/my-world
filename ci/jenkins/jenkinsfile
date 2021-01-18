@@ -69,4 +69,18 @@ agent { docker 'centos' }
             }
         }
     }
+    post {
+       // only triggered when blue or green sign
+       success {
+           slackSend(channel: "@Miyakon", message:"Success")
+       }
+       // triggered when red sign
+       failure {
+           lackSend(channel: "@Miyakon", message:"Failure")
+       }
+       // trigger every-works
+       always {
+           lackSend(channel: "@Miyakon", message:"always")
+       }
+    }
 }
