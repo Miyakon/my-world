@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Bill():
     def __init__(self, description):
         self.description = description

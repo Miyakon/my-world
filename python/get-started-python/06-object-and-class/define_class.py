@@ -19,13 +19,14 @@ class Goodman():
     def say(self):
         return 'My name is Goodman'
 
-def who_says(obj):
-    print(obj.say())
+if __name__ == "__main__":
+    def who_says(obj):
+        print(obj.say())
 
-person = Person('person', 'saikou')
-miyako = Miyako('miyako', 'saikou')
-goodman = Goodman()
+    person = Person('person', 'saikou')
+    miyako = Miyako('miyako', 'saikou')
+    goodman = Goodman()
 
-who_says(person)
-who_says(miyako)
-who_says(goodman)
+    who_says(person)
+    who_says(miyako)
+    who_says(goodman)
