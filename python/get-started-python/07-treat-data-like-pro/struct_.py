@@ -13,9 +13,11 @@ if __name__ == "__main__":
     else:
         print('Not a valid PNG')
 
-    # Pythonデータをバイトに変換する
+    # Pythonデータをバイトに変換する．
+    # 数値じゃないとダメみたい．
     print('\n')
     print('>L -> ' + repr(struct.pack('>L', 154)))
     print('<L -> ' + repr(struct.pack('<L', 154)))
     print('>LL -> ' + repr(struct.pack('>LL', 1, 2)))
+    
     
