@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # menuはdictのデータ構造であり，json.dumpsで文字列にエンコードされる．
     menu_json = json.dumps(menu)
-    print(type(menu_json))
+    print('dumps data =\n', type(menu_json))
 
     # 再度Pythonデータ構造に戻す.
     menu2 = json.loads(menu_json)
