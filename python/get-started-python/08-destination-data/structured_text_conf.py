@@ -23,4 +23,4 @@ bin = %(home)s/bin"""
     print(cfg['french'])
     print(cfg['french']['greeting'])
     print(cfg['files']['bin'])
-    
+
