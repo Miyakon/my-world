@@ -32,6 +32,7 @@ if __name__ == "__main__":
     # 最もダメージが大きい動物はなにか？
     curs.execute('''SELECT * FROM zoo WHERE
     damages = (SELECT MAX(damages) FROM zoo)''')
-    curs.fetchall()
+    rows = curs.fetchall()
+    print(rows)
 
     # 終了後にはデータが残らない
