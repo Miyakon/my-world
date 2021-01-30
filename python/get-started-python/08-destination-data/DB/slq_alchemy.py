@@ -7,7 +7,7 @@ if __name__ == "__main__":
     # DBを作り，メモリ内にその記憶領域(storage)を作る．
     # 引数の文字列は，"sqlite:///:memory:'でもよい
 
-    ### エンジンレイヤ
+    # --- エンジンレイヤ ---
     conn = sa.create_engine('sqlite://')
 
     # 3つの列を持つzooテーブルを作る
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    ### SQL表現言語
+    # --- SQL表現言語 ---
     meta = sa.MetaData()
     zoo2 = sa.Table('zoo2', meta,
         sa.Column('critter', sa.String, primary_key=True),
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    ### ORM
+    # --- ORM ---
     # ORMではもう一つimportが必要になる
     from sqlalchemy.ext.declarative import declarative_base
 
