@@ -8,8 +8,9 @@ if __name__ == "__main__":
         return static_file('index.html', root='.')
 
     @route('/echo/<thing>')
-    def echo(thing):
+    def echo(thing):ß
         return "Say hello to my little friend: %s!" % thing
 
     run(host='localhost', port=9999)
+
 
